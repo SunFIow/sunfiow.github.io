@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Rust Servers</title>
+	
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="rustServers.html">Rust Servers</a></li>
+			<li><a href="minecraftMap.html">Minecraft Map</a></li>
+			<li><a href="applications.html">Applications</a></li>
+			<li><a href="webApplications.html">Web Applications</a></li>
+		</ul>
+	</nav>
+
+	<br>
+	<p class="title">Rust Server Page</p>
+
+	<script type="application/javascript">
+		window.addEventListener('message', function(e) {
+			if (e.data.uid && e.data.type === 'sizeUpdate') {
+				let i = document.querySelector('iframe[name="' + e.data.uid + '"]');
+				i.style.width = e.data.payload.width;
+				i.style.height = e.data.payload.height;
+			}
+		});
+	</script>
+	<!-- Wilsonator Solo Only -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/1697482.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="cncnx"></iframe>
+	<!-- Wilsonator Solo/Duo -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/1968368.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="ymmyu"></iframe>
+
+	<!-- Space --> <span style='margin-left:40px'></span>
+	<!-- RustOps #6 Vanilla 2x+ Solo/Duo/Trio -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/755663.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="pdfrg"></iframe>
+
+	<!-- Space --><span style='margin-left:40px'></span>
+	<!-- NorthernStar#2 Solo Only   -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/1683914.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="exeax"></iframe>
+	<!-- NorthernStar#3 Solo/Duo  -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/1701198.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="vmdwc"></iframe>
+	<!-- NorthernStar#5 Solo/Duo/Trio 2x -->
+	<iframe src="https://cdn.battlemetrics.com/b/standardVertical/3347067.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="lwlga"></iframe>
+
+</body>
+
+</html>
