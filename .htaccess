@@ -1,20 +1,20 @@
-# mod_rewrite start here
-
+<IfModule mod_rewrite.c>
+#Options -MultiViews
 RewriteEngine on
 
-# does not apply to existing directories, meaning that if the folder exists on the server
-then don't change anything and don't run the Rule!
-
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# Check for file in directory with .html extension
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
 
-RewriteCond %{REQUEST_FILENAME}\.html -f
+#RewriteCond %{REQUEST_FILENAME}.html -f
+#RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+</IfModule>
 
-# Here we actually show the page that has the .html extension
-
-RewriteRule ^(.*)$ $1.html [NC,L]
-
-ErrorDocument 403 "Forbidden. Directory listing has been disabled."
+ErrorDocument 403 "403 Forbidden. Directory listing has been disabled."
 ErrorDocument 404 /404.html
-ErrorDocument 404 /500.html
+ErrorDocument 500 /500.html
+
+Options -Indexes
